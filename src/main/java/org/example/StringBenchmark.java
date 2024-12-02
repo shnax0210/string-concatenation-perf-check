@@ -12,7 +12,7 @@ public class StringBenchmark {
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 5, time = 1)
-    @Measurement(iterations = 5, time = 1)
+    @Measurement(iterations = 100, time = 1)
     @Fork(1)
     public String testStringConcatenation() {
         String str = "";
@@ -26,7 +26,7 @@ public class StringBenchmark {
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Warmup(iterations = 5, time = 1)
-    @Measurement(iterations = 5, time = 1)
+    @Measurement(iterations = 100, time = 1)
     @Fork(1)
     public String testStringBuilder() {
         StringBuilder builder = new StringBuilder();
